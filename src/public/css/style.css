@@ -1,0 +1,408 @@
+/*** The new CSS reset - version 1.8.4 (last updated 14.2.2023) ***/
+
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg*, symbol*)) {
+    all: unset;
+    display: revert
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box
+}
+
+a,
+button {
+    cursor: revert
+}
+
+ol,
+ul,
+menu {
+    list-style: none
+}
+
+img {
+    max-inline-size: 100%;
+    max-block-size: 100%
+}
+
+table {
+    border-collapse: collapse
+}
+
+input,
+textarea {
+    -webkit-user-select: auto
+}
+
+textarea {
+    white-space: revert
+}
+
+meter {
+    -webkit-appearance: revert;
+    appearance: revert
+}
+
+:where(pre) {
+    all: revert
+}
+
+::placeholder {
+    color: unset
+}
+
+::marker {
+    content: initial
+}
+
+:where([hidden]) {
+    display: none
+}
+
+:where([contenteditable]:not([contenteditable="false"])) {
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    -webkit-line-break: after-white-space;
+    -webkit-user-select: auto
+}
+
+:where([draggable="true"]) {
+    -webkit-user-drag: element
+}
+
+:where(dialog:modal) {
+    all: revert
+}
+
+body {
+    background-color: #F5F5F5;
+    color: #333333;
+    width: 80vw;
+    margin: 0px auto;
+    font-family: 'IBM Plex Sans JP', sans-serif;
+    font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    background-color: #ebebeb;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    border-left: #2a9235 3px solid;
+    border-bottom: #2a9235 3px solid;
+
+}
+
+
+.header-div {
+    /* display: flex;
+    align-items: center; */
+    background-color: #ebebeb;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    border-bottom: #2a9235 3px solid;
+
+}
+
+.header-div h1,
+.header-div h2 {
+    background-color: #ebebeb;
+    border-radius: none;
+    padding: 5px;
+    margin: 5px;
+    border-left: none;
+    border-bottom: none;
+
+}
+
+.header-div h1 {
+    display: inline-block;
+    font-size: 16px;
+    border: 1px solid #FFC107;
+}
+
+.header-div h2 {
+    color: #2a9235;
+    /* border-bottom: #2a9235 10px dotted; */
+}
+
+nav {
+    margin: 27px auto 0;
+
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: #ebebeb;
+    border-radius: 8px;
+    font-size: 0;
+}
+
+nav a {
+    line-height: 50px;
+    height: 100%;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all .5s ease 0s;
+    border-radius: 8px;
+}
+
+a:nth-child(1) {
+    width: 20%;
+}
+
+a:nth-child(2) {
+    width: 20%;
+}
+
+a:nth-child(3) {
+    width: 20%;
+}
+
+a:nth-child(4) {
+    width: 20%;
+}
+
+a:nth-child(5) {
+    width: 20%;
+}
+
+nav .start-home,
+a:nth-child(1):hover~.animation {
+    width: 20%;
+    left: 0;
+    background-color: #4CAF50;
+}
+
+nav .start-about,
+a:nth-child(2):hover~.animation {
+    width: 20%;
+    left: 20%;
+    background-color: #922a7d;
+}
+
+nav .start-blog,
+a:nth-child(3):hover~.animation {
+    width: 20%;
+    left: 40%;
+    background-color: #FFC107;
+}
+
+nav .start-portefolio,
+a:nth-child(4):hover~.animation {
+    width: 20%;
+    left: 60%;
+    background-color: #554cbf;
+}
+
+nav .start-contact,
+a:nth-child(5):hover~.animation {
+    width: 20%;
+    left: 80%;
+    background-color: #916400;
+}
+main a.btn{
+    display: block;
+    width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #ebebeb;
+    border: 3px solid #FFC107;
+    color: #333333;
+    text-decoration: none;
+    text-align: center;
+}
+main a.btn:hover{
+    background-color: #FFC107;
+}
+form {
+    margin-top: 40px;
+    width: 100%;
+}
+
+label {
+    width: 40%;
+    display: block;
+    font-weight: 600;
+    border-bottom: #FFC107 1px solid;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+input,
+button {
+    letter-spacing: 3px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ebebeb;
+    border: 3px solid #FFC107;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+
+}
+
+input:hover,
+button:hover {
+    background-color: #FFC107;
+}
+
+select {
+    width: 100%;
+    /* styling */
+    background-color: white;
+    border: thin solid #FFC107;
+    border-radius: 10px;
+    display: inline-block;
+    font: inherit;
+    line-height: 1.5em;
+    padding: 0.5em 3.5em 0.5em 1em;
+
+    /* reset */
+
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin-bottom: 30px;
+}
+
+select.round {
+    background-image:
+        linear-gradient(45deg, transparent 50%, gray 50%),
+        linear-gradient(135deg, gray 50%, transparent 50%),
+        radial-gradient(#ddd 70%, transparent 72%);
+    background-position:
+        calc(100% - 20px) calc(1em + 2px),
+        calc(100% - 15px) calc(1em + 2px),
+        calc(100% - .5em) .5em;
+    background-size:
+        5px 5px,
+        5px 5px,
+        1.5em 1.5em;
+    background-repeat: no-repeat;
+}
+
+select.round:focus {
+    background-image:
+        linear-gradient(45deg, white 50%, transparent 50%),
+        linear-gradient(135deg, transparent 50%, white 50%),
+        radial-gradient(gray 70%, transparent 72%);
+    background-position:
+        calc(100% - 15px) 1em,
+        calc(100% - 20px) 1em,
+        calc(100% - .5em) .5em;
+    background-size:
+        5px 5px,
+        5px 5px,
+        1.5em 1.5em;
+    background-repeat: no-repeat;
+    border-color: green;
+    outline: 0;
+}
+.formErr{
+    color: #2a9235;
+}
+
+table {
+    margin-top: 30px;
+    width: 100%;
+}
+
+table th,
+table td {
+    border-bottom: 1px solid #2a9235;
+    border-right: 1px solid #2a9235;
+    padding: 10px;
+}
+
+table th:last-of-type,
+table td:last-of-type {
+    border-right: none;
+}
+
+.tableName {
+    border-right: 1px solid #2a9235;
+}
+
+.null-th {
+    /* background-color: #2a9235; */
+}
+
+table a {
+    color: #333333;
+    text-decoration: none;
+}
+
+table a:hover {
+    text-decoration: underline solid #2a9235;
+}
+
+a.deleteBtn {
+    display: inline;
+    border: 1px solid #FFC107;
+    padding: 5px;
+}
+
+a.deleteBtn:hover {
+    text-decoration: none;
+    background-color: #FFC107;
+}
+
+details {
+    padding: 1rem;
+    background: #ebebeb;
+    border-radius: 5px;
+    margin: 10px auto;
+}
+
+summary {
+    outline: none;
+}
+
+details[open] form {
+    animation: fadeIn 0.5s ease;
+}
+
+details[close] form {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
